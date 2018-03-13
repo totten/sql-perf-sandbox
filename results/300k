@@ -1,0 +1,56 @@
+NOTE: Executed on MacBook Pro 2015 with OSX. Mysqld v5.7 is running in ramdisk.
+
+Connect to testperf_9y09l
+Array
+(
+    [Scale] => Array
+        (
+            [limit] => 300000
+            [offset] => 959877
+        )
+
+)
+Trial #00: select 1                       ==> 0.000
+Trial #00: select full count              ==> 0.273
+Trial #00: select id, display_name        ==> 0.825
+Trial #00: fill redis w/ids+names (serialize()) ==> 1.312
+Trial #00: fill redis w/ids+names (json_encode()) ==> 1.011
+Trial #00: fill prevnext cache w/ids      ==> 2.258
+Trial #00: create temp ids+names          ==> 1.274
+Trial #01: select 1                       ==> 0.000
+Trial #01: select full count              ==> 0.292
+Trial #01: select id, display_name        ==> 0.849
+Trial #01: fill redis w/ids+names (serialize()) ==> 1.262
+Trial #01: fill redis w/ids+names (json_encode()) ==> 0.978
+Trial #01: fill prevnext cache w/ids      ==> 2.236
+Trial #01: create temp ids+names          ==> 1.252
+Trial #02: select 1                       ==> 0.000
+Trial #02: select full count              ==> 0.281
+Trial #02: select id, display_name        ==> 0.861
+Trial #02: fill redis w/ids+names (serialize()) ==> 1.306
+Trial #02: fill redis w/ids+names (json_encode()) ==> 0.997
+Trial #02: fill prevnext cache w/ids      ==> 2.255
+Trial #02: create temp ids+names          ==> 1.257
+Trial #03: select 1                       ==> 0.000
+Trial #03: select full count              ==> 0.276
+Trial #03: select id, display_name        ==> 0.851
+Trial #03: fill redis w/ids+names (serialize()) ==> 1.288
+Trial #03: fill redis w/ids+names (json_encode()) ==> 1.028
+Trial #03: fill prevnext cache w/ids      ==> 2.277
+Trial #03: create temp ids+names          ==> 1.256
+Trial #04: select 1                       ==> 0.000
+Trial #04: select full count              ==> 0.283
+Trial #04: select id, display_name        ==> 0.855
+Trial #04: fill redis w/ids+names (serialize()) ==> 1.333
+Trial #04: fill redis w/ids+names (json_encode()) ==> 1.013
+Trial #04: fill prevnext cache w/ids      ==> 2.249
+Trial #04: create temp ids+names          ==> 1.255
+
+
+Average: select 1                       ==> 0.000
+Average: select full count              ==> 0.281
+Average: select id, display_name        ==> 0.848
+Average: fill redis w/ids+names (serialize()) ==> 1.300
+Average: fill redis w/ids+names (json_encode()) ==> 1.005
+Average: fill prevnext cache w/ids      ==> 2.255
+Average: create temp ids+names          ==> 1.259
