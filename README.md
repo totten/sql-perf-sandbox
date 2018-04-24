@@ -14,7 +14,7 @@ Create tables and populate them with dummy data
 ./setup.sh
 ```
 
-# Bencharmk
+# Benchmark
 
 ```
 ./benchmark.sh
